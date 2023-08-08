@@ -8,11 +8,8 @@ pkgdesc="AirPlay 2 audio player with multi-room playback"
 arch=('i686' 'x86_64' 'arm' 'armv6h' 'armv7h' 'aarch64')
 url="https://github.com/mikebrady/shairport-sync"
 license=('custom')
-makedepends=('autoconf' 'automake' 'libtool' 'xxd' 'libalac' 'mosquitto' 'ffmpeg4.4')
-depends=('openssl' 'avahi' 'popt' 'libconfig' 'nqptp' 'ffmpeg4.4' 'libsodium' 'libplist' 'mosquitto' 'alac')
-optdepends=('pulseaudio: PulseAudio support'
-            'pipewire: PipeWire support'
-            'libsoxr: libsoxr-based resampling')
+makedepends=('autoconf' 'automake' 'libtool' 'xxd' 'mosquitto' 'ffmpeg4.4')
+depends=('openssl' 'avahi' 'popt' 'libconfig' 'nqptp' 'ffmpeg4.4' 'libsodium' 'libplist' 'mosquitto' 'libsoxr')
 provides=('shairport-sync')
 conflicts=('shairport-sync')
 source=("$_pkgname::git+https://github.com/mikebrady/shairport-sync#branch=development"
@@ -54,7 +51,6 @@ build() {
     --with-mqtt-client \
     --with-ssl=openssl \
     --with-metadata \
-    --with-apple-alac \
     --with-soxr \
     --with-systemd \
     --with-dbus-interface \
