@@ -9,7 +9,7 @@ arch=('i686' 'x86_64' 'arm' 'armv6h' 'armv7h' 'aarch64')
 url="https://github.com/mikebrady/shairport-sync"
 license=('custom')
 makedepends=('autoconf' 'automake' 'libtool' 'xxd' 'mosquitto' 'ffmpeg4.4')
-depends=('openssl' 'avahi' 'popt' 'libconfig' 'nqptp' 'ffmpeg4.4' 'libsodium' 'libplist' 'mosquitto' 'libsoxr')
+depends=('openssl' 'avahi' 'popt' 'libconfig' 'nqptp' 'ffmpeg4.4' 'libsodium' 'libplist' 'mosquitto' 'pipewire' 'libsoxr')
 provides=('shairport-sync')
 conflicts=('shairport-sync')
 source=("$_pkgname::git+https://github.com/mikebrady/shairport-sync#branch=development"
